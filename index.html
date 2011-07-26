@@ -1,2 +1,18 @@
 <!doctype html>
 <title>krebscode</title>
+<style>
+  html {
+    background: black url(krebs-v2.png) fixed no-repeat 50% 0%;
+    background-size: 10px;
+  }
+</style>
+<script>
+  window.onload = function () {
+    html = document.getElementsByTagName('html')[0];
+    window.onresize();
+  }
+  window.onresize = function () {
+    html.style.backgroundSize =
+        Math.min(document.height - 23, document.width - 23) + 'px';
+  }
+</script>
