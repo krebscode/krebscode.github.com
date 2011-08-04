@@ -1,0 +1,96 @@
+<style>
+  body {
+    /*background-color: #232323;*/
+    background-color: #121212;
+    color: #efefef;
+    font-family: monospace;
+
+    text-shadow: 0px 0px 1px #1a1a1a;
+
+    }
+  .code {
+    color: #59ef6d;
+    text-shadow: #00bf1a 0 0 8px, 0px -1px 3px #000;
+  }
+  .code .comment {
+    color: #efefef;
+  }
+  .code .comment .todo {
+    color: #ff4444;
+    text-shadow: #bb0000 0 0 8px;
+  }
+  .code .special {
+    color: #ff44ff;
+    text-shadow: #bb44bb 0 0 8px;
+  }
+  .code a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .code a:hover {
+    color: #2f7ffb;
+    text-shadow: #2f7ffb 0 0 8px;
+    text-decoration: underline;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  a {
+    color: #2f7ffb;
+    text-decoration: none;
+  }
+  a:hover {
+    text-shadow: #2f7ffb 0 0 8px;
+    text-decoration: underline;
+  }
+  .krebs {
+    color: #EF3E42;
+  }
+  .error {
+  color: #ff0000;
+  font-weight: bold;
+  }
+</style>
+
+test <span class="code">echo `echo ja <span class="comment"># ne</span>
+  <br>echo ja`</span> ===&gt; <span class="code">ja ja</span> test
+<br>
+<span class="code">
+  <pre>
+    <span class="comment">#! /bin/sh</span>
+    <span class="comment"># <span class="todo">TODO</span> document me!</span>
+    echo '<span class="special">^[</span>[31mRED<span class="special">^[</span>[m'
+    exec curl "<a href="http://krebscode.github.com/">http://krebscode.github.com/</a>"
+  </pre>
+</span>
+<span class="code">
+  <pre>
+    <span class="comment">;; it's totally worth to define sqr!</span>
+    ($define! sqr
+      ($lambda (x)
+        (* x x)))
+    <span class="special">^L</span>
+  </pre>
+</span>
+test
+<br>
+test <a href="http://krebscode.github.com/">http://krebscode.github.com/</a> test
+<br>
+This is <span class="krebs">krebs</span>.<br>
+This is an <span class="error">error message</span>.<br>
+
+<canvas id="a" width="1" height="2"></canvas>
+<script>
+  function fff () {
+  var a = document.getElementById('a');
+  var context = a.getContext('2d');
+  context.moveTo(0,0);
+  context.lineTo(a.width,0);
+  context.strokeStyle = '#232323'
+  context.stroke();
+  document.getElementsByTagName('body')[0].style.backgroundImage =
+    'url(' + a.toDataURL() + ')';
+  }
+  window.onload =  fff;
+</script>
